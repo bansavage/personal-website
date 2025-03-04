@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- test -->
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Kyle Bansavage</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" >
+    <!-- CSS3 Animation Cheat Sheet -->
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Google fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom Styles & JS -->
+    <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <script src="js/homePage.js" type="text/javascript"></script>
+    <script>
+        var mobileUser = false;
+        if ( /Mobi/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent)) {
+            mobileUser = true;
+        }
+    </script>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <div id="desktop-container" class="container">
+        <!-- Title -->
+        <h1 id="title">
+            Bansavage
+        </h1>
+        <!-- Nav -->
+        <nav id="links">
+          <a id="about" onclick="modifyContent(this,'About')">about</a><br>
+          <a id="work" onclick="modifyContent(this,'Work')">work</a><br>
+          <a id="contact" onclick="modifyContent(this,'Contact')">contact</a><br>
+          <a href="../assets/Kyle_Bansavage_Resume.pdf" id="resume" target='_blank'>resume</a><br>            
+          <a href="../swamp/index.html" id="exp" target='_blank'>fun</a><br>
+        </nav>
+		<!-- NEW 2019 EDITION Nav 
+		<nav id="links2">
+            <a id="about" onclick="modifyContent(this,'About')"><span>about</span></a><br>
+            <a id="work" onclick="modifyContent(this,'Work')"><span>work</span></a><br>
+			<a id="contact" onclick="modifyContent(this,'Contact')"><span>contact</span></a><br>
+            <a href="../assets/Kyle_Bansavage_Resume.pdf" id="resume" target='_blank'><span>resume</span></a><br>            
+            <a href="../swamp/index.html" id="exp" target='_blank'>fun</a><br>
+        </nav>-->
+
+        <!-- navigation AND content -->
+        <div class="container">
+          <!-- Content -->
+          <div id="content">
+          </div>
+        </div> <!-- end container -->     
+
+    </div> <!-- end main content div -->
+
+    <div id="mobile-container">
+       <!-- Title -->
+        <div class="rellax mobile__title" data-rellax-speed="1">
+           <img class="img-fluid" style="max-width:75vw;" src="./assets/logo/logo-thick-black-transparent.png" />
+        </div>
+
+        <!-- About -->
+        <h1 class="rellax mobile__rightalign" data-rellax-speed="0"><div style="transform: rotate(-5deg);">About</div></h1>
+        <div class="rellax" data-rellax-speed="-1">    
+          <p class="mobile__p">
+            I am senior developer based in Manhattan. 
+            I currently work for @ Myntr in NYC.
+            Within my professional career I have built & led development teams, developed Shopify themes for multi-million dollar commerce companies, engineered software for Mitsubishi Electric, and designed the inventory system for the RIT Information Technology department.
+            Check out my work!
+          </p>
+        </div>
+
+        <!-- Space Invader -->
+        <div class="rellax space-invader" data-rellax-speed="0" data-rellax-zindex="-99"></div>
+
+        <!-- Work -->
+        <h1 style="margin-left:.5em;" class="rellax" data-rellax-speed="-1"><div style="transform: rotate(5deg);">Work</div></h1>
+        <div style="height:200px"></div>
+        <!-- Space Invader -->
+        <div class="mobile__work">
+
+            <a class="mobile__linkbtn" href='https://drinkarizona.com/' target='_blank'>Arizona Iced Tea</a>            
+            <p class="mobile__workP">The Classic 99¢ beverage</p>
+            
+            <a class="mobile__linkbtn" href='https://www.pier1.com/' target='_blank'>Pier1</a>            
+            <p class="mobile__workP">Home goods</p>
+
+            <a class="mobile__linkbtn" href='https://www.lavazzausa.com/' target='_blank'>Lavazza</a>            
+            <p class="mobile__workP">Italy's #1 coffee company</p>
+
+            <a class="mobile__linkbtn" href='https://veronicabeard.com/' target='_blank'>Veronica Beard</a>            
+            <p class="mobile__workP">Luxury women's fashion</p>
+
+            <a class="mobile__linkbtn" href='https://www.hedleyandbennett.com/' target='_blank'>Hedley & Bennett</a>            
+            <p class="mobile__workP">LA's leading apron company</p>
+
+            <a class="mobile__linkbtn" href='https://ninewest.com/' target='_blank'>Ninewest</a>            
+            <p class="mobile__workP">High-end shoes</p>
+            
+            <a class="mobile__linkbtn" href='https://www.wholelattelove.com/' target='_blank'>Whole Latte Love</a>
+            <p class="mobile__workP">Largest retailer for espresso machines</p>
+
+            <a class="mobile__linkbtn" href='https://hellobonafide.com/' target='_blank'>Bonafide</a>            
+            <p class="mobile__workP">Health and Wellness brand</p>
+            
+            <!--
+            <a class="mobile__linkbtn" href='https://www.essentialespresso.com/' target='_blank'>Essential Espresso</a>            
+            <p class="mobile__workP">Boutique espresso machines</p>
+        -->
+
+            <!-- <a class="mobile__linkbtn" href='malmo/index.html' target='_blank'>Malmo, Sweden</a>            
+            <p class="mobile__workP">Photographic journal of my time in Scandanavia</p>             -->
+
+            <!-- <a class="mobile__linkbtn" href='https://www.thesophisticatedman.net/' target='_blank'>The Sophisticated Man</a>            
+            <p class="mobile__workP">Masculinity coaching site for a freelance client</p>
+
+            <a class="mobile__linkbtn" href='http://www.borger.fun/' target='_blank'>Camp Borger</a>            
+            <p class="mobile__workP">Groovy website for local Rochester band</p> -->
+       </div>
+       
+       <!-- Contact -->
+       <h1 style="margin:2em 0 1em .5em;">Contact</h1>
+       <div class="mobile__contact">
+            <a class="mobile__linkbtn mobile__marginBottom" href='https://github.com/bansavage' target='_blank'>GitHub</a> 
+            <a class="mobile__linkbtn mobile__marginBottom" href='https://www.linkedin.com/in/kylebansavage/' target='_blank'>LinkedIn</a>
+            <!-- <a class="mobile__linkbtn mobile__marginBottom" href='https://twitter.com/kylebansavage' target='_blank'>Twitter</a> -->
+       </div>   
+       <div style="height:50px"></div>    
+    </div>
+
+    <!-- particle js (https://marcbruederlin.github.io/particles.js/) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script>
+        /*
+        if(!mobileUser){
+            $('body').append('<canvas class="particle-background"></canvas>') 
+            window.onload = function() {
+                    Particles.init({
+                        selector: '.particle-background',
+                        color: ['#D2B3FF', '#BFC8FF', '#B3E5FF'],
+                        maxParticles: 200,
+                        connectParticles: true
+                    });
+                }; 
+        }      
+        */  
+    </script>
+    <!-- Rellax.js -->
+    <script src="js/rellax.min.js" type="text/javascript"></script>
+    <script>
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
+    </script>
+
+</body>
+
+</html>
