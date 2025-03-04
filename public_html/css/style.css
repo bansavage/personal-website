@@ -1,0 +1,368 @@
+@font-face 
+{ 
+	font-family: BebasNeueBold;
+	src: url('/fonts/BebasNeue Bold.otf');
+}
+@font-face 
+{ 
+	font-family: BebasNeueReg;
+	src: url('/fonts/BebasNeue Regular.otf');
+}
+
+body
+{
+	margin:0;
+	overflow-x: hidden;
+	background:white;	
+	height:100vh;
+}
+
+
+
+/* Global Navigation*/
+#globalNav
+{
+    background-color: #F5F5F5;
+    text-align: center;
+    list-style-type: none;
+    position: fixed;
+    height: 60px;
+    top:0;
+    left: 0;
+    right: 0;
+    margin:auto;
+	font-family: BebasNeueReg, 'Lato', sans-serif;
+	border-bottom: 1px solid rgba(0,0,0,0.75);
+	-webkit-box-shadow: -1px 3px 21px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 3px 21px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 3px 21px -1px rgba(0,0,0,0.75);	
+	z-index:1;
+}
+#globalNav2
+{
+	
+    background-color: #F5F5F5;
+    text-align: center;
+    list-style-type: none;
+    height: 15vh;
+	font-family: BebasNeueReg, 'Lato', sans-serif;
+	border-bottom: 1px solid rgba(0,0,0,0.75);
+	-webkit-box-shadow: -1px 3px 21px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 3px 21px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 3px 21px -1px rgba(0,0,0,0.75);	
+	z-index:1;
+	position:relative;
+	width:100%;
+	bottom:0px;
+	margin:0;
+}
+
+.navItem
+{	
+    display:inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#topBar{
+    position: relative;    
+    padding:0;
+	font-size:30px;	
+	top:-16px;
+}
+#bottomBar
+{
+	position: relative;    
+    padding:0;
+	font-size:30px;	
+	padding-top:30px;
+}
+/* Copyright */
+#copyright
+{
+	font-size:25px;
+	color:#3C5B7A;
+}
+
+/* Links */
+a,#contact{
+    color:black;
+    text-decoration: none;
+}
+a:hover,#contact:hover{
+    color:#7DBDFF;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+	cursor:pointer;
+}
+
+/* Hero image */
+#pic 
+{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../images/heroPitt.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+    height:100vh; 
+    width:100vw;
+    display:block	
+}
+
+/* Container over hero image */
+#titleText
+{
+   position: absolute; 
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   text-align:center;
+   width: 80%; 
+}
+
+/* Title text : Kyle Bansvaage */
+#titleBorder
+{
+   font-size: 100px;
+   font-family: BebasNeueBold, 'Lato', sans-serif;
+   color:white;
+   border-style: solid;
+   border-width: 5px;
+   border-color: white;
+   padding-left:10px;
+   padding-right:10px; 
+   padding-top:10px;    
+   letter-spacing: 5px;
+   display: inline-block;
+}
+
+/* Sub text : Interactive Resume */
+#titleSubtext
+{
+   display: block;
+   color:white;
+   font-size: 60px;
+   font-family: 'Yesteryear', cursive, 'Lato', sans-serif;
+}
+
+#arrow
+{
+	width:60px;
+	height:60px;
+	background-image: url('/images/arrow.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:25px;
+}
+
+/* ABOUT content */
+h1
+{
+	text-align:center;
+	color:black;
+	font-family: BebasNeueBold, 'Lato', sans-serif;
+	font-size:70px;
+}
+
+#aboutPara
+{
+	font-size:25px;
+	width:80%;
+	font-family: 'Lato', sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+	line-height: 170%;
+	text-align:center;
+}
+
+#myFace
+{
+	margin-left:auto;
+	margin-right: auto; 
+	height:350px;
+	width:350px;
+	display: block;
+	padding-top:20px; 
+	padding-bottom:20px;
+	visibility: hidden;
+}
+
+/* Social media buttons */
+#socialmedia
+{
+	padding-top:10px;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+#facebook,#twitter,#linkedin
+{
+	width:60px;
+	height:60px;
+	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right:30px;	
+}
+#facebook
+{
+	background-image: url('/images/fb-reg.png');	
+}
+#twitter
+{
+	background-image: url('/images/tweet-reg.png');	
+}
+#linkedin
+{
+	background-image: url('/images/linked-reg.png');	
+}
+#facebook:hover
+{
+	background-image: url('/images/fb-hover.png');
+	cursor:pointer
+}
+#twitter:hover
+{
+	background-image: url('/images/tweet-hover.png');
+	cursor:pointer
+}
+#linkedin:hover
+{
+	background-image: url('/images/linked-hover.png');
+	cursor:pointer
+}
+
+/* ScrollMagic zones content */
+h2
+{
+	font-size:45px;
+	font-family: BebasNeueBold, 'Lato', sans-serif;
+	font-size:70px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:50px;
+	
+}
+
+
+.contentZone
+{
+	font-size:25px;
+	padding-left:150px;
+	padding-right:100px;
+	font-family: 'Lato', sans-serif;
+	line-height: 170%;
+}
+
+.titles
+{
+	font-size:25px;
+	padding-left:120px;
+	padding-right:100px;
+	font-family: 'Lato', sans-serif;
+	line-height: 170%;
+}
+
+.indent
+{	
+	padding-left:200px;
+	padding-right:100px;
+	width:900px;
+	font-size:25px;
+	font-family: 'Lato', sans-serif;
+	line-height: 170%;
+}
+
+/* Panels for ScrollMagic */
+.panel 
+{
+	height: 100%;
+	width: 100%;
+	margin-bottom:0px;/*400*/
+	color:white;
+	position: absolute; 
+}
+
+#pinContainer 
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+	
+.panel.edu
+{
+	/*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../images/rit.jpg');*/
+	background-color:#FF8533;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+    display:block;
+	margin-bottom:0px;/*100*/	
+	
+}
+.panel.skills
+{
+	background-color:#397CFF;
+}
+.panel.projects 
+{
+	background-color:#FF3F30;
+}
+.panel.work
+{
+	background-color:#4D924D ;
+	margin-bottom:300px;
+}
+
+
+/* Project buttons */
+button
+{
+	margin-left:50px;
+	width:100px;
+	height:30px;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	cursor:pointer;
+}
+
+/* Contact Info */
+#info
+{
+	color:black;
+	background-color:#7DBDFF;
+	font-family: 'Lato', sans-serif;
+	border-style: solid;
+    border-width: 5px;
+    border-color: black;
+	border-radius: 50%;	     
+	width:25%;
+	height:25%;
+	text-align:center;	
+	padding-top:100px;
+}
+
+#emailMe
+{	
+	font-size:45px;
+	font-family: BebasNeueBold, 'Lato', sans-serif;
+	border-bottom: thick solid black;
+	width:25%;
+	height:25%;
+}
+#otherText
+{	
+	font-size:30px;
+	font-family:'Lato', sans-serif;
+	width:25%;
+	height:25%;
+}
+
+

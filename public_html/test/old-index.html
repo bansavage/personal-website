@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kyle Bansavage</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+</head>
+
+	<!-- Load jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<!-- ScrollMagic Library -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+	<script src="/js/animation.gsap.js"></script>
+	
+	<!-- Jquery easyModal -->
+	<script type="text/javascript" src="/js/easyModal.js"></script>
+	
+	<!-- CSS3 Animation Cheat Sheet -->
+	<link rel="stylesheet" href="css/animations.css">
+	
+	<!-- JavaScript for changing hero image opacity AND initializing js for slides-->
+	<script type='text/javascript'>
+	
+		//<![CDATA[ 
+		
+		/*
+		* Ability to retrieve HTML element's coordinates
+		*/
+		function getPos(el) 
+		{
+			for (var lx=0, ly=0;
+				 el != null;
+				 lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+			return {x: lx,y: ly};
+		}
+		
+		/* 
+		* Hero Image Fade
+		*/
+		$(window).load(function()
+		{
+			//This is for modal
+			$('#info').easyModal({
+				overlayOpacity: 0.5,
+				overlayColor: "#000"
+			});
+			//^
+			var object = $('#pic');
+			var objectHeight = object.outerHeight();
+			$(document).scroll(function(e)
+			{
+				var scrollPercent = (objectHeight - (window.scrollY+200)) / objectHeight;
+				if(scrollPercent >= 0)
+				{
+					object.css('opacity', scrollPercent);
+				}
+				if(window.scrollY == 0)
+				{
+					document.getElementById('pic').style.opacity = 1;
+				}
+			});
+		});	
+		
+		/* Internal Link Scrolling */
+		$(document).ready(function()
+		{
+			$('a[href^="#"]').on('click',function (e) {
+				e.preventDefault();
+
+				var target = this.hash;
+				var $target = $(target);
+
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 900, 'swing', function () {
+					window.location.hash = target;
+				});
+			});
+		});
+				
+		
+		/* 
+		* ScrollMagic 
+		
+		$(function () { // wait for document ready
+			// init
+			var controller = new ScrollMagic.Controller({
+				globalSceneOptions: {
+					triggerHook: 'onLeave'
+				}
+			});
+
+			// get all slides
+			var slides = document.querySelectorAll("section.panel");
+
+			// create scene for every slide
+			for (var i=0; i<slides.length; i++) {
+				new ScrollMagic.Scene({
+						triggerElement: slides[i]
+					})
+					.setPin(slides[i])
+					.addTo(controller);
+			}
+		});		
+		
+		*/
+		$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller();
+
+		// define movement of panels
+		var wipeAnimation = new TimelineMax()
+			.fromTo("section.panel.skills", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+			.fromTo("section.panel.projects",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+			.fromTo("section.panel.work", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+
+		// create scene to pin and link animation
+		new ScrollMagic.Scene({
+				triggerElement: "#pinContainer",
+				triggerHook: "onLeave",
+				duration: "300%"
+			})
+			.setPin("#pinContainer")
+			.setTween(wipeAnimation)
+			.addTo(controller);
+		});
+		
+		/* 
+		* CSS3 Animation
+		*/
+		$(window).scroll(function() 
+		{
+			$('#myFace').each(function(){
+			var imagePos = $(this).offset().top;
+			var topOfWindow = $(window).scrollTop();
+				if (imagePos < topOfWindow+600)
+				{
+					$(this).addClass("fadeIn");
+				}
+			});
+		});
+		
+			
+		function addAnimation(ele) 
+		{
+			$(ele).addClass("pulse");
+		}
+		
+		function delAnimation(ele) 
+		{
+			$(ele).removeClass("pulse");
+		}
+		
+		/*
+		* Show modal information for 'Contact' link
+		*/
+		function runContact()
+		{
+			$('#info').trigger('openModal');			  
+		}
+		
+		//]]>  
+	</script>	
+
+<body>
+
+    <!-- Sole span tag for hero image -->
+	<span id="pic"></span>
+	
+	<!-- Title text -->
+	<div id="titleText">
+		<span id="titleBorder">Kyle&nbsp; Bansavage</span>
+		<!--<span id="titleSubtext">~ interactive resume ~</span>-->
+		<a href="#about">
+		<div id="arrow" class="floating">
+		</div>
+		</a>
+	</div>
+
+	<!-- Global Nav Bar -->
+	<div id="globalNav">
+		<ul id="topBar">
+			<li class="navItem"><a href="#about">ABOUT</a></li>
+			<li class="navItem"><a href="#edu">EDUCATION</a></li>
+			<li class="navItem"><a href="#skills">SKILLS</a></li>
+			<li class="navItem"><a href="#projects">PROJECTS</a></li>
+			<li class="navItem"><a href="#work">WORK EXPERIENCE</a></li>
+			<li class="navItem" id="contact" onclick="runContact()">CONTACT</li>
+		</ul>
+	</div>
+	
+	<!-- About Me -->
+	<div  id="about" style="height:90px;"></div>	
+	<h1>
+	ABOUT ME
+	</h1>	
+	<div id="aboutPara">
+	I am a third year student and currently pursuing a <br>
+	Bachelor's Degree in Information Technology at RIT.<br>
+	I love bringing ideas to reality using technology!<br>
+	</div>
+	
+	<!-- Image of my face -->
+	<img src="/images/kyle.png" alt="Me" id="myFace" >
+	
+	<div id="aboutPara">
+	Browse my LinkedIn!
+	</div>
+	
+	<!-- Social Media buttons -->
+	
+	<div id="socialmedia">		
+	<!--
+		<a href="https://www.facebook.com/kyle.bansavage">
+			<span id="facebook" onmouseover="addAnimation(this)" onmouseout="delAnimation(this)">
+			</span>
+		</a>
+		
+		<a href="https://twitter.com/kylebansavage">
+			<span id="twitter" onmouseover="addAnimation(this)" onmouseout="delAnimation(this)">	
+			</span>
+		</a>-->
+		<a href="http://www.linkedin.com/in/kylebansavage">
+			<span id="linkedin" onmouseover="addAnimation(this)" onmouseout="delAnimation(this)">
+			</span>
+		</a>
+	</div>	
+	<br><br><br>
+	
+	<!-- Education jump-to -->
+	<div  id="edu"></div>
+	<div  id="skills" style="top:305%; position:absolute;"></div>
+	<div  id="projects" style="top:405%; position:absolute;"></div>
+	<!-- Container for all sections -->
+	<div id="pinContainer">
+	
+		<!-- EDUCATION -->	
+		<section class="panel edu">	
+			<h2>
+			EDUCATION
+			</h2>
+			<ul class="contentZone">
+			  <li>Rochester Institute of Technology in Rochester, NY</li>
+			  <li>Bachelor of Science in Information Sciences and Technology</li>
+			  <li>Expected Graduation: May 2017</li>
+			  <li>GPA: 3.6</li>
+			</ul>
+		</section>
+		
+		<!-- SKILLS -->				
+		<section class="panel skills">
+			<h2>
+			SKILLS
+			</h2>
+			<ul class="contentZone">
+			  <li>Java</li>
+			  <li>JavaScript</li>
+			  <li>jQuery</li>
+			  <li>HTML</li>
+			  <li>CSS</li>
+			  <li>PHP</li>
+			  <li>SQL</li>
+			  <li>C#</li>
+			  <li>XML</li>
+			  <li>Swift</li>
+			</ul>
+		</section>
+		
+		<!-- PROJECTS -->		
+		<section class="panel projects">
+			<h2>
+			PROJECTS
+			</h2>
+			<ul class="contentZone">		
+				<li>Emulated a retro hacking interface  to demonstrate JSON manipulation.</li>	
+					<!-- <button type="button" onclick="window.location='http://kylebansavage.com/project1/'">Check it out!</button> -->
+				<li>Designed a tourism website promoting visits to Colorado</li>
+					<!-- <button type="button" onclick="window.location='http://kylebansavage.com/project3/'"download.html";">Check it out!</button> -->
+				<li>Created a website to obtain and display information from a REST web service data source.</li>	
+					<!-- <button type="button" onclick="window.location='http://kylebansavage.com/project2/'">Check it out!</button> -->
+				<li>Created a four player, network-based PONG game in Java</li>	
+				<li>Developed an e-commerce website utilizing PHP and MySQL</li>	
+				<li>Designed and built a website to teach users about PHP</li>	
+				<li>With a team, created a website that utilizes Node.js to interact with a MySQL database </li>	
+			</ul>
+		</section>
+		
+		<!-- WORK -->
+		<section class="panel work" >
+			<h2 style="">
+			WORK EXPERIENCE
+			</h2>
+			
+			<p class="titles" style="text-decoration:underline;">
+			Computer Lab Assistant (August 2015 - Present @ RIT)<br>
+			</p>
+			<ul class="indent">
+				<li>Responsible for daily lab maintenance</li>
+				<li>Inspect and repair broken hardware</li>
+			</ul>
+			
+			<p class="titles" style="text-decoration:underline;">
+			Communication Specialist Co-Op (June 2015 - August 2015 @ RIT)<br>
+			</p>
+			<ul class="indent">
+				<li>Upheld day-to-day operations of SolarWinds Orion and Cisco Prime platforms</li>
+				<li>Optimized and monitored RIT's networks</li>
+			</ul>
+			
+			<p class="titles" style="text-decoration:underline;">
+			Supplemental Instruction Leader (August 2014 - May 2015 @ RIT)<br>
+			</p>
+			<ul class="indent">
+				<li>Hosted weekly study sessions for students in a Java programming class to increase their understanding of class concepts</li>
+				<li>Coached and prepared students with successful study habits</li>
+			</ul>		
+		</section>
+	</div><!-- End Pin container -->
+	
+	<!-- Link Jump-To -->	
+	<div  id="work"></div>
+	
+	<!-- Contact Info -->
+	<div  id="info">
+		<span id="emailMe">
+		Email Me! 
+		</span>
+		<br><br><br>
+		<span id="otherText">
+		kdb8176@rit.edu
+		</span>
+	</div>
+	
+</body>
+
+</html>
+
+
+

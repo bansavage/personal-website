@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Hacking Project | ISTE 340</title>	
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="assets/js/cookies.js"></script>
+	<script src="assets/js/validate.js"></script>
+    <script src="assets/js/script.js"></script>
+	
+</head>
+<body onload="fadeButton()">
+
+	<!-- Title in top left -->
+	<div id="header">
+
+		<h1 class="greenColor">
+			<span class="typing">Hack The Mainframe</span>		
+			<img src="assets/images/cursor.gif"  id="cursor" align="right" alt="cursor"/> 	
+						
+		</h1>
+
+		<!-- Extra corny tidbits under title -->
+		<h4 class="greenColor">
+			<span class="typing">
+			Version 4.0.5 Alpha E<br>
+			Main Program Running <br>
+			System Ready
+			</span>
+			<br><br><br>
+			<button onclick="menuChange('init');" id="setup" >Run Set Up</button>
+		</h4>
+	</div>
+    <div id="container">
+			
+		<!-- Div containing all drop down menus -->
+		<div id="content">  
+			<!-- Form -->
+			<form action="index.html" id="menuForm">				
+			</form>
+			
+		</div> <!--End content div-->		
+		
+		<!-- Displays user choices -->
+        <div id="output" >
+			<div id="outputText" >
+				> bash# 3.2$ ssh access@system<br>
+				> mainframe access bash_access_root : enabled <br>
+				> awaiting user input...<br><br>
+			</div>
+			
+			<!-- Form to gather user info -->
+			<form action="index.html" id="infoForm" onsubmit="return validate();" >		
+				
+			</form>
+			
+        </div>
+
+    </div>
+	<script>
+
+</script>
+</body>
+</body>
+</html>
+
+
+
+
+
+
+

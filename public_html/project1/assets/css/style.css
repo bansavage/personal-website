@@ -1,0 +1,172 @@
+/*
+Kyle Bansavage
+CSS file for Project 1
+*/
+
+/* Span tag for form spacing */
+span
+{
+	display: inline-block;
+	width:120px;
+	font-weight:bold;
+}
+		
+#first-name, #last-name, #location
+{
+	width:250px;
+	font-family:Courier;
+	font-size:12pt;
+}
+
+#submit
+{
+	margin-top:10px;
+}
+
+html
+{
+	background: url('../images/terminal4.jpg') no-repeat;
+	background-size:100% 100%;
+	height:100vh;
+	font-family:Courier;
+}
+
+
+/* Option menu holding area */
+#content
+{
+    float:left;
+    width:50vw; 
+	transition:.5s;
+}
+
+/* Output div to hold user's final choices*/
+#output
+{
+    float:left;
+    background:black;
+    color:white;
+    padding:5px;
+	width:40vw;
+	height:60vh; /*459*/
+	background: url('../images/terminal.jpg') no-repeat;
+	background-size:100% 100%;
+	opacity:1;
+}
+
+#outputText
+{
+	padding-top:30px;
+	padding-left:30px;
+	padding-right:30px;
+	padding-bottom:0;
+	opacity: 0;
+}
+
+#output, #outputText
+{
+	visibility: hidden;
+}
+
+#infoForm
+{
+	padding-top:30px;
+	padding-left:30px;
+	padding-right:30px;
+}
+
+/* Holds output id and content id*/
+#container
+{
+    width:100%;
+    margin-left:60px;
+    margin-right: 10px;
+}
+
+/* Class for green font color */
+.greenColor
+{
+	color:#00FF00;
+}
+
+h1
+{	
+	width:60vw;
+	margin-top:75px;
+	margin-left:50px;
+	font-family: 'Press Start 2P';
+
+}
+
+h4
+{
+	font-family: 'Press Start 2P';
+	margin-left:50px
+}
+
+h3
+{
+	border: 5px solid white;
+	padding:10px;
+    width:60%;
+	font-size:150%;
+	background-color:black;
+}	 
+
+/* Top right text on screen */
+header
+{	margin-right:0;
+	padding:0;
+	width:100%;
+	margin-left:50px;
+}
+
+/* Flashing gif image */
+#cursor
+{
+	left: 40w;
+	position: absolute;
+	top: 0;
+	height:60px;
+	margin-top:50px;
+}
+
+/* ID for select tags */
+.menu
+{
+	height:50px;
+	width:350px;
+	font-size:14pt;
+	font-family:Courier;
+}
+
+
+#setup
+{
+	width: 200px; 
+	height: 50px;
+	font-size:16pt;
+	margin-bottom:0px;
+	font-family:Courier;
+	margin-bottom:0;
+}
+
+/* CSS Typing animation */
+.typing
+{
+    width: 600px;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 4s steps(100, end);
+    animation: type 4s steps(100, end);
+	color:#00FF00;
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+

@@ -1,0 +1,132 @@
+body
+	{
+		background-image: url("tile.gif");
+		margin: 0;
+	}
+	#pic
+	{
+		height:100%;
+		width:100%;
+		background-color:yellow;
+		box-shadow:0px 0px 100px 50px #00FF00;		
+		position:relative		
+		margin-top: 0px;
+		padding: 0px;
+		width:800px;
+		height:500px;
+		margin-left:auto;
+		margin-right:auto;	
+		
+	}
+	/* BOTTOM ROW */
+	#bottom
+	{
+		position:fixed;
+		height:100vh;
+		width:100vw;
+		z-index:2;
+	}
+	/* MIDDLE ROW */
+	#middle
+	{
+		position:fixed	;	
+		height:66vh;
+		width:100vw;
+		z-index:2;
+	}
+	/* TOP ROW */
+	#top
+	{
+		position:fixed;
+		height:33vh;
+		width:100vw;
+		z-index:2;
+		
+	}
+	/* JS BUTTON HOLDING DIVS*/
+	#right
+	{
+		position:fixed;
+		height:33vh;
+		width:33vw;	
+	}
+	
+	#mid
+	{
+		position:fixed;
+		height:33vh;
+		width:33%;
+		left:33%;		
+	}
+	
+	#left
+	{
+		position:fixed;
+		height:33vh;
+		width:100vw;
+		left:66%;
+	}
+	
+	#right2
+	{
+		position:fixed;
+		top:33%;
+		height:33vh;
+		width:33vw;		
+	}
+	
+	#mid2
+	{
+		position:fixed;
+		height:33vh;
+		width:33%;
+		left:33%;		
+		top:33%;		
+	}
+	
+	#left2
+	{
+		position:fixed;
+		height:33vh;
+		width:33%;
+		left:66%;		
+		top:33%;	
+				
+	}
+	
+	#right3
+	{
+		position:fixed;
+		top:66%;
+		height:33vh;
+		width:33vw;		
+		left:66%;
+		
+	}
+	
+	#mid3
+	{
+		position:fixed;
+		top:66%;
+		height:33vh;
+		width:33vw;		
+		left:33%;
+		
+	}
+	
+	#left3
+	{
+		position:fixed;
+		top:66%;
+		height:33vh;
+		width:33vw;	
+		
+	}
+	
+	button
+	{
+		width:100%;
+		height:100%;
+		background-color: Transparent;
+		border: solid red 15px;
+	}

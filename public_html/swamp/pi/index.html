@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>POOP IMPLANTS</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<script>
+	<!--Script used to change the picture-->
+		var fullPic;
+		var i =1;
+		var board = [];
+		var possibleBoards = [];
+		var openMoves = [];
+		var tempMoves = [];
+		var openSpots = [];
+		function init()
+		{
+			fullPic = document.getElementById("pic");
+			fullPic.style.backgroundImage="url('pic1.PNG')";
+			setInterval(function(){picSwitch()},'1000');
+		}
+		function picSwitch()
+		{
+			i++;
+			if(i>4)
+			{
+				i=1;
+			}
+			var newPic = "pic" + i + ".PNG"; 
+			fullPic.style.backgroundImage="url("+newPic+")";
+		}
+		
+		function popTempMoves() {
+			for (i = 0; i < board.length; i++) {
+				    tempMoves.push(board[i]);
+			}
+			tempMoves.sort();
+		}
+		
+		function runAi()
+		{
+		    board.sort();
+		    for (i = 0; i < board.length; i++) {
+			    for(i=0; i<=9; i++){
+				    console.log("check1");
+					console.log(board.indexOf(i));
+				    if(board.indexOf(i) == -1) {
+					    openMoves.push(i);
+					}
+				}
+				console.log(openMoves);
+				popTempMoves();
+				if(tempMoves[i] == false) {
+				    tempMoves.push(i);
+					possibleBoards.push(tempMoves);
+					tempMoves = [];
+				}
+				tempMoves = [];
+			}
+			console.log(tempMoves);
+		}
+		
+		function setImage(ele)
+		{
+			document.getElementById(ele).style.backgroundImage="url('o.gif')";
+			if(ele == "left3") {
+				    board.push(9);
+				} else if (ele == "mid3") {
+				    board.push(8);
+				 } else if (ele == "right3") {
+				    board.push(7);
+				 } else if (ele == "left2") {
+				    board.push(6);
+				 } else if (ele == "mid2") {
+				    board.push(5);
+				 } else if (ele == "right2") {
+				    board.push(4);
+				 } else if (ele == "left") {
+				    board.push(3);
+				 } else if (ele == "right") {
+				    board.push(2);
+				 } else if (ele == "mid") {
+				    board.push(1);
+			}
+			runAi();
+		}
+		
+		
+</script>
+
+<body onload="init();">		
+	
+	<div id="bottom">
+		<div id="left3">
+			<button type="button" onclick='setImage("left3")' id="bot-right"></button>
+		</div>
+		<div id="mid3">
+			<button type="button" onclick='setImage("mid3")' id="bot-mid"></button>
+		</div>
+		<div id="right3">		    
+			<button type="button" onclick='setImage("right3")' id="bot-left"></button>
+		</div>
+	</div>
+	
+	<div id="middle">
+		<div id="left2">
+			<button type="button" onclick='setImage("left2")'  id="mid-right"></button>
+		</div>
+		<div id="mid2">
+			<button type="button" onclick='setImage("mid2")'  id="mid-mid"></button>
+		</div>
+		<div id="right2">
+			<button type="button"  onclick='setImage("right2")' id="mid-left"></button>
+		</div>
+	</div>
+	
+	<div id="top">
+		<div id="left">
+			<button type="button"  onclick='setImage("left")'  id="top-right"></button>
+		</div>
+		<div id="mid">
+			<button type="button"  onclick='setImage("mid")' id="top-lmid"></button>
+		</div>
+		<div id="right">
+			<button type="button"  onclick='setImage("right")' id="top-left"></button>
+		</div>
+	</div>
+	
+	<div id="pic"> </div>
+
+		
+
+	
+	
+	
+</body>
+
+</html>

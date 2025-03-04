@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Project 2</title>
+	<!-- Import jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+		<!-- JQuery UI -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>	
+   	<!-- My Personal script -->
+	<script src="script.js" type="text/javascript"></script>		
+	<!-- My Personal stylesheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">	
+	<link rel="stylesheet" type="text/css" href="assets/tablesorter.css">	
+	<!-- JQuery UI styles -->
+	<link rel="stylesheet" type="text/css" href="assets/jquery-ui.css">	
+	<link rel="stylesheet" type="text/css" href="assets/jquery-ui.structure.css">	
+	<link rel="stylesheet" type="text/css" href="assets/jquery-ui.theme.css">		
+	<!-- Google font -->
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	<!-- Table sorter plug-in  -->		
+	<script type="text/javascript" src="assets/jquery.tablesorter.js"></script> 
+	<script type="text/javascript" src="assets/jquery.tablesorter.pager.js"></script> 
+	<script>
+		//$.noConflict();
+	</script>
+</head>
+<body>
+
+	<div id= "content">
+		<!-- Header -->
+		<div id="header">
+			<h1>
+			Service Locater
+			</h1>
+		</div>	
+		
+		<!-- Form to gather user input -->
+		<form id="mainSearch">
+		
+			<!-- Organization Type -->
+			<span class="label">Organization Type</span>
+			<select id="orgType" onchange="" name="type" class="formSelection"></select>
+			
+			
+			<!-- Organization Name -->
+			<span class="label" >Organization Name</span>
+			<input id="orgName" class="formSelection" name="name" type="text"> 
+			
+			<!-- State-->
+			<span class="label">State</span>
+			<select id="state" class="formSelection" onchange="getCities( $(this).val() )" name="state">
+				<option value="">All States</option>      
+				<option value="AK">AK</option>
+				<option value="AL">AL</option>
+				<option value="AR">AR</option>
+				<option value="AZ">AZ</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DC">DC</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="IA">IA</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="MA">MA</option>
+				<option value="MD">MD</option>
+				<option value="ME">ME</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MO">MO</option>
+				<option value="MS">MS</option>
+				<option value="MT">MT</option>
+				<option value="NC">NC</option>
+				<option value="ND">ND</option>
+				<option value="NE">NE</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NV">NV</option>
+				<option value="NY" selected="selected">NY</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VA">VA</option>
+				<option value="VT">VT</option>
+				<option value="WA">WA</option>
+				<option value="WI">WI</option>
+				<option value="WV">WV</option>
+				<option value="WY">WY</option>
+		  </select> 
+		   <br>
+		 <!-- Cities (placeholder for new select menu to appear) -->
+		 <span class="label">City</span>
+		 <span id="orgCitySearch" class="formSelection"></span>
+		 <br>
+		 <!-- County -->
+		 <span class="label">County</span>
+		 <input id="county" class="formSelection" name="county" type="text">
+		  
+		 <!-- Zip Code -->
+		 <span class="label">ZIP Code</span>
+		 <input id="zip" class="formSelection" type="text" name="zip">
+		 <br><br><br>
+		<!-- Buttons -->
+		<input value="Show Results" onclick="checkSearch()" id="search" class="button" type="button"> 
+		<input type="reset" id="reset" value="Reset Form" onclick="">
+		  
+	  </form>
+	</div>
+ 
+  <div id="dump"></div>  
+  <div id="tableOutput"></div>
+    
+
+</body>
+</html>
+
+
+<!-- end content div -->
+  
+  
+    <!-- Tabs 
+  <div id="tabs">
+	  <ul>
+		<li><a href="#general">General</a></li>
+		<li><a href="#locations">Locations</a></li>
+		<li><a href="#treatments">Treatment</a></li>
+		<li><a href="#training">Training</a></li>
+		<li><a href="#facilities">Facilities</a></li>
+		<li><a href="#equipment">Equipment</a></li>
+		<li><a href="#physicians">Physicians</a></li>
+		<li><a href="#people">People</a></li>
+	 </ul>
+	
+	<div id="tableFont">
+		 <table id="general"></table>
+		 <table id="locations"></table>
+		 <table id="treatments"></table>
+		 <table id="training"></table>
+		 <table id="facilities"></table>
+		 <table id="equipment"></table>
+		  <table id="physicians"></table>
+		  <table id="people"></table>
+	</div>
+  
+</div>-->

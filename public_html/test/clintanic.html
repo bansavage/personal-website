@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLINTANIC</title>
+    <!-- JQUERY -->
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <!-- IMAGE FALLING SCRIPT -->
+    <script type="text/javascript" src="falling.js"></script>
+    <style>
+
+        html{
+            background:url(http://www.nationalgeographic.com/content/dam/photography/photos/000/185/18509.ngsversion.1467941748942.adapt.1900.1.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow:hidden;
+        }
+        body{
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+<!-- Init clinantic falling -->
+<script type="text/javascript">
+    $(function() {
+        $(document).snow({ SnowImage: "https://s3.amazonaws.com/clintanic/Hillary-sinking.png" ,Quantity: 5});
+    });
+    $(document).on('click tap','img',function(){
+        var curr = Math.floor(Math.random() * 10) + 1;
+        //play soundbite
+        try{
+            var sound = new Audio(curr.toString()+".mp3");
+            sound.play();
+        }catch (Exception){}
+    });
+</script>
+
+</body>
+</html>

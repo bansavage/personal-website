@@ -1,0 +1,296 @@
+/* Parallax Scrolling section size */
+.parallax-window {
+    min-height: 115vh;
+    background: transparent;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0)
+}
+
+/* fonts */
+@font-face {
+    font-family: Bitter;
+    src: url(../lib/fonts/Bitter-Regular.otf);
+}
+/*html */
+html{
+    overflow-x: hidden;
+}
+/* FONTS */
+@font-face {
+    font-family: Tratex;
+    src: url(../lib/fonts/Tratex.TTF)  format("truetype");
+}
+/* Hide nav bar class */
+.hidden-nav{
+    transform: translateY(-100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Tratex, 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 200;
+}
+/* Speed up image loading */
+img{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/* SECTIONS GLOBAL */
+.section{
+    width:100vw;
+}
+.section h1{
+    font-size:50px;
+    margin-bottom: 50px;
+    color:black;
+    padding-top:30px;
+}
+.section p{
+    font-size:20px;
+    font-family: 'Bitter','Libre Baskerville', 'Helvetica', 'Arial', 'sans-serif';
+    font-weight:300;
+    max-width:900px;
+    line-height: 35px;
+    color:black;
+    word-wrap: break-word;
+}
+
+/* PAGE 1 */
+#malmo-title{
+    font-size: 8em;
+}
+#header-img-div{
+    height: 100vh;
+}
+#header-img-div > img {
+    position: absolute;
+    bottom: 0;
+}
+
+/* SECTIONS INDIVIDUAL */
+/* PAGE 4*/
+#sustainableCity p{
+    font-size:18px;
+}
+.rightImage{
+    width:550px;
+    height: auto;
+    float:right;
+    border-radius: 25px;
+}
+
+/* PAGE 5*/
+.leftImage{
+    width:550px;
+    height: auto;
+    border-radius: 25px;
+    float:left;
+}
+#influences > p{
+    max-width: 400px;
+    font-size:18px;
+}
+
+/* PAGE 6 BIKES */
+#influenceExampleBike{
+}
+.bgImageText
+{
+    width:450px;
+    max-width:450px;
+    color:white !important;
+    margin-top:5em;
+    padding:15px;
+    box-shadow: inset 0 0 0 12.5em rgba(0,0,0,0.5);
+    transition: .3s ease-in-out;
+}
+.bgImageTextHide{
+    color: #fff;
+    font-size: 13px;
+    font-style: italic;
+}
+/* PAGE 8 HYLLIE */
+#influenceExampleHyllie{
+}
+#hyllie p{
+    font-size:18px;
+}
+/* PAGE 11 HARBOR */
+#bgHarbor{
+}
+/* PAGE 14 BATHHOUSE */
+#bgBathhouse{
+}
+
+/* Scroll down indicator */
+.scrolldown{
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 2em;
+}
+/* Sections (intro,about,project) */
+#intro{
+    background-color: #fcd116;
+    color: #0d8bd9;
+    overflow-x:hidden;
+}
+#abstract{
+    background: -webkit-linear-gradient(#fcd116, white);
+    background: -o-linear-gradient(#fcd116, white);
+    background: -moz-linear-gradient(#fcd116, white);
+    background: linear-gradient(#fcd116, white);
+}
+
+/* Gold and Blue colors when needed */
+#gold{
+    color: #fcd116;
+}
+#blue{
+    color: #0d8bd9;
+}
+
+
+/* Custom Link Colors */
+#blueLink{
+    color: #0d8bd9;
+}
+#blueLink:hover,
+#blueLink:focus,
+#blueLink:active {
+    background-color: #0d8bd9;
+    color: #fcd116;
+}
+#goldLink{
+    color: #fcd116;
+}
+#goldLink:hover,
+#goldLink:focus,
+#goldLink:active {
+    background-color: #fcd116;
+    color: #0d8bd9;
+}
+
+
+/* Carousel Gallery */
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+.thumbnail {
+    padding: 0;
+    width: 100%;
+    height: 4em;
+}
+.thumbnail > img{
+    width:100%;
+    height:100%;
+}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+
+/* Loading */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: white;
+}
+.se-pre-con > h2{
+    text-align: center;
+    margin-top: 10%;
+    color: #00AACF;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #00AACF;
+    border-bottom: 16px solid #00AACF;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: 10% auto 0 auto;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Img Tag */
+.image{
+    visibility: hidden;
+}
+
+/* Text hover effects */
+#oxfam-hover{
+    padding: 0 5px 0 5px;
+    background-color: #97c00e;
+    cursor: pointer;
+    text-shadow: none !important;
+    color: black !important;
+}
+#green-hover{
+    padding: 0 5px 0 5px;
+    background-color:#98a85f;
+    cursor: pointer;
+    text-shadow: none !important;
+    color: black !important;
+}
+#bike-hover{
+    padding: 0 5px 0 5px;
+    background-color:#93d2cd;
+    cursor: pointer;
+    text-shadow: none !important;
+    color: black !important;
+}
+#emporia-hover{
+    padding: 0 5px 0 5px;
+    background-color:#98a85f;
+    cursor: pointer;
+    text-shadow: none !important;
+    color: black !important;
+}
+/* Gallery */
+.gal {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+.gal img{
+    width: 100%; padding: 7px 0;
+}
+@media (max-width: 500px) {
+    .gal {
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+    }
+
+}
+/* Festival Section */
+#festival-section{
+   /* */
+}
+
+.text-before-video{
+    margin-top:5em;
+}
+

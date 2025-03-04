@@ -1,0 +1,124 @@
+/*
+Kyle Bansavage
+CSS file for Project 1
+*/
+
+
+/* Font for tables */
+#tableFont
+{
+	font-family:Quicksand;	
+	font-weight: 700;
+}
+
+/* Body padding */
+body
+{
+	padding-left:25px;
+	padding-right:25px;
+	padding-bottom:20px;
+}
+
+/* Formatting for data not found */
+.notFound
+{
+	font-style: italic;
+}
+
+/* All main content */
+#content
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:800px;
+}
+
+/* Span tag for field labels */
+.label
+{
+	color: #00142A;
+	display: inline-block;
+	width:300px;
+	font-weight:bold;
+	font-family:Arial;
+	font-size:18pt;
+	padding-bottom:10px;
+}
+
+/* Drop Down Menu and inputs*/
+.formSelection
+{
+	font-size:14pt;
+	font-family:Quicksand;	
+	font-weight: 700;
+
+}
+
+/* Align city drop down menu */
+#cityMenu
+{
+	/*float:right;*/
+	width:150px;
+}
+
+#orgCitySearch
+{
+	/*width:455px;*/
+}
+
+/* Button CSS */
+#reset,#search
+{
+	text-align:center;
+	background-color: #790100;
+	color:white;
+	font-family:Quicksand;
+	font-size:14pt;
+	width:150px;
+	height:40px;
+}
+
+#reset:hover,#search:hover
+{
+	text-align:center;
+	background-color:#943433;
+	color:white;
+	font-family:Quicksand;
+	cursor:pointer;
+}
+
+/* Form formatting and colors */
+form
+{	
+	background-color: #AAB9D8;
+	border-radius: 25px;
+	padding:20px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+/* Header of page */
+#header
+{
+	background-color: #790100;
+	border-radius: 25px;
+	padding:20px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+h1
+{
+	color:white;
+	text-align:center;
+	font-size:35pt;
+	font-family:Quicksand;	
+	font-weight: 700;
+}
+
+#results
+{
+	text-align:left;
+}
+
+
+
+

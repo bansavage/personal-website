@@ -1,0 +1,35 @@
+@media (max-width: 500px){
+    .bgImageText
+    {
+        width:unset;
+    }
+}
+/* IPHONE 5 QUERIES */
+@media (max-width: 350px){
+    /* torso intro img */
+    #header-img-div > img{
+        position: relative;
+    }
+}
+/* malmo title text */
+@media (max-width: 445px){
+    #malmo-title{
+        font-size: 5em;
+    }
+}
+
+/* RESPONSIVE MODE ENGAGED */
+@media (min-width:992px){
+    /* Full page sections */
+    #influences,#cityofbikes,#hyllie,#seniortext,#nationaltext,#fashiontext{
+        height:110vh;
+    }
+    .video-section{
+        height:auto;
+    }
+}
+
+/* RESPONSIVE MODE ENGAGED */
+@media (max-width:991px){
+    /* nothing */
+}

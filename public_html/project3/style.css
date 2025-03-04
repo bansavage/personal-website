@@ -1,0 +1,389 @@
+/* Set the background color, margins,dimensions, and font families for all pages*/
+body
+{
+	 width:100%;
+	 height:100%;
+	 background-color: #D0D9D0;	 
+	 font-family: "Source Sans Pro", Arial, Helvetica, Arial;
+	 margin: 0;
+	 padding: 0;
+}
+#homelink
+{
+	font-weight:bold;
+	
+}
+#homelink:hover
+{
+	cursor:pointer;
+	transition:.3s;
+	
+}
+/* Pads the text of paragraphs and headers in the content area*/
+p,h1
+{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom: 10px;
+
+}
+h3
+{
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	text-decoration:underline;
+}
+.specp
+{
+	padding-top:0px;
+
+}
+/* Everything within the body of the text that is not the header */
+span
+{
+	font-style: italic;
+}
+/* Everything within the body of the text that is not the header */
+.content 
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	background-color: white;
+	overflow: auto;
+	padding-left: 20px;
+	padding-right: 20px;	
+	font-size: 130%;
+}
+
+/* Centers the home picture in the middle of the screen and allows it,
+	in combination with the nav bar, take up the whole screen */
+#homepic
+{
+	  background: url('images/home_pic.jpg');
+	  background-repeat: no-repeat;
+	  width:100%;
+	  height:93vh;
+	  background-size: cover;
+	  background-position: center;
+	
+}
+/* Banner Image that stretches across sub pages*/
+#banner
+{
+	  background: url('images/banner.jpg');
+	  background-repeat: no-repeat;
+	  width:100%;
+	  height:20vh;
+	  background-size: cover;
+	  background-position: center;
+}
+/* Sets citation text small*/
+.photo_cite
+{
+	font-size:75%;
+	font-style:italic;
+}
+
+/* Sets dimensions of link pictures */
+.link_pic
+{
+	background-repeat: no-repeat;
+	width:100%;
+	height:35vh;
+	padding:0;
+}
+/* IDS to set specific background images */
+#link_pic_out
+{
+	background: url('images/outdoor.jpg');	
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_shop
+{
+	background: url('images/shopping.jpg');
+	background-size: cover;	
+	background-position: center;
+}
+#link_pic_dine
+{
+	background: url('images/dining.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_zoo
+{
+	background: url('images/zoo.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_mus
+{
+	background: url('images/museum.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_mus2
+{
+	background: url('images/mus2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_park
+{
+	background: url('images/park.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_raft
+{
+	background: url('images/rafting.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_store
+{
+	background: url('images/store.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_food
+{
+	background: url('images/food.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_park2
+{
+	background: url('images/park2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_animal
+{
+	background: url('images/animal.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#link_pic_beer
+{
+	background: url('images/beer.jpg');
+	background-size: cover;
+	background-position: center;
+}#link_pic_poe
+{
+	background: url('images/poe.jpg');
+	background-size: cover;
+	background-position: center;
+}#link_pic_denver
+{
+	background: url('images/denver.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+/* Aligns title of image, sets colors, and modifies font*/
+.link_pic_title
+{
+	background-color: #397354;
+	color:white;
+	font-family:Lobster;
+	font-size: 180%;
+	text-align:center;
+	margin-bottom:5px;
+	width:100%;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+/* Aligns the global navigation bar for the home page*/
+#nav_bar_index
+{
+	text-align:center;
+	margin-top:0%;
+	width: 100%;
+	background-color: #E6BB87;
+	padding-bottom:10px;
+	padding-top:10px;
+	font-family: Lobster, "Lucida Calligraphy";
+	font-size:230%;
+	color:#397354;
+	height:7vh;
+}
+
+/* Aligns the global navigation bar across all sub pages*/
+.nav_bar
+{
+	text-align:center;
+	margin-top:0%;
+	width: 100%;
+	background-color: #E6BB87;
+	padding-bottom:10px;
+	padding-top:10px;
+	font-family: Lobster, Arial;
+	font-size:230%;
+	color:#397354;
+}
+
+
+/* Everything for links */
+
+a.global:link, a.global:visited
+{
+	color: #397354;
+	text-decoration: none;
+	font-weight: 600;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: .3s;
+}
+a.global:active 
+{
+	color: white;
+}
+a.global:hover{color: white; }
+
+a.internal:link, a.internal:visited
+{
+	color: #397354;
+	text-decoration: none;
+	font-weight:bold;
+	font-family:Lobster;
+	font-size:110%;
+	
+}
+a.internal:hover
+{	
+	border-bottom: solid #397354;
+	
+ }
+
+ /* Comment Picture div*/
+#comment_pic
+{
+	float:right;
+	height:300px;
+	width:400px;
+	background-color:blue;
+	border:solid black;
+	margin-right:100px;
+}
+
+.label
+{
+	color:#397354;
+	font-style:normal;
+	font-family:Lobster;
+	font-size:140%;
+}
+
+input,textarea
+{	
+	font-size: 90%;
+	font-family: "Source Sans Pro";
+}
+#comments_field
+{
+	margin-left:10px;
+	height:80px;
+	width:300px;
+	height:80px;
+}
+#email
+{
+	margin-left:60px;
+	width:300px;
+	height:40px;
+}
+#name
+{
+	margin-left:58px;
+	width:300px;
+	height:40px;
+}
+#status
+{
+	color:#397354;
+	padding-bottom:20px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+#submit
+{
+	background-color:#397354;
+	color:white;
+}
+
+
+
+
+/* All CSS table code */
+table {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:3px solid #000000;
+    border-collapse: collapse;
+    border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	font-family: "Source Sans Pro";
+}
+ tr:nth-child(odd)
+ { 
+	background-color:#e6bb87; 
+ }
+tr:nth-child(even)    
+{ 
+	background-color:#ffffff; 
+}
+td
+{
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:20px;
+	font-weight:normal;
+	color:#000000;
+}
+tr:last-child td
+{
+	border-width:0px 1px 0px 0px;
+} 
+tr td:last-child
+{
+	border-width:0px 0px 1px 0px;
+}
+ tr:last-child td:last-child
+ {
+	border-width:0px 0px 0px 0px;
+}
+tr:first-child td
+{
+	background:-o-linear-gradient(bottom, #397354 5%, #397354 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #397354), color-stop(1, #397354) );
+	background:-moz-linear-gradient( center top, #397354 5%, #397354 100% );
+	background: -o-linear-gradient(top,#397354,397354);
+	background-color:#397354;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:20px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+.tabh
+{
+	font-size:25px;
+	text-align:left;
+}
+

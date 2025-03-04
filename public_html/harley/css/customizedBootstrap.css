@@ -1,0 +1,62 @@
+/* A tags */
+a{
+    color:#195033;
+    text-decoration: none;
+}
+a:hover{
+    cursor:pointer;
+}
+a:hover,
+a:focus,
+a:active{
+    color:#25744A;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+/* HARLEY THEME BUTTONS */
+.btn-harley {
+    color: #FFFFFF;
+    background-color: #195033;
+    border-color: #123A25;
+}
+
+.btn-harley:hover,
+.btn-harley:focus,
+.btn-harley:active,
+.btn-harley.active,
+.open .dropdown-toggle.btn-harley {
+    color: #FFFFFF;
+    background-color: #25744A;
+    border-color: #123A25;
+}
+
+.btn-harley:active,
+.btn-harley.active,
+.open .dropdown-toggle.btn-harley {
+    background-image: none;
+}
+
+.btn-harley.disabled,
+.btn-harley[disabled],
+fieldset[disabled] .btn-harley,
+.btn-harley.disabled:hover,
+.btn-harley[disabled]:hover,
+fieldset[disabled] .btn-harley:hover,
+.btn-harley.disabled:focus,
+.btn-harley[disabled]:focus,
+fieldset[disabled] .btn-harley:focus,
+.btn-harley.disabled:active,
+.btn-harley[disabled]:active,
+fieldset[disabled] .btn-harley:active,
+.btn-harley.disabled.active,
+.btn-harley[disabled].active,
+fieldset[disabled] .btn-harley.active {
+    background-color: #195033;
+    border-color: #123A25;
+}
+
+.btn-harley .badge {
+    color: #195033;
+    background-color: #FFFFFF;
+}

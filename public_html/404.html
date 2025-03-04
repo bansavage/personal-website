@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error!</title>
+<style>
+@font-face 
+{ 
+	font-family: BebasNeueBold;
+	src: url('/fonts/BebasNeue Bold.otf');
+}
+@font-face 
+{ 
+	font-family: BebasNeueReg;
+	src: url('/fonts/BebasNeue Regular.otf');
+}
+
+body
+{
+	margin:0;
+	overflow-x: hidden;
+	background:white;	
+	height:100vh;
+}
+
+#main
+{
+   position: absolute; 
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   text-align:center;
+   width: 80%; 
+}
+
+h1
+{
+	font-size:80px;
+	font-family: BebasNeueReg;
+	margin-bottom:10px;
+}
+
+.btn 
+{
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: BebasNeueReg;
+  color: #ffffff;
+  font-size: 23px;
+  background: #888888 ;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover 
+{
+  background: black;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+	<div id="main">
+		<h1>
+		You didn't say the magic word!
+		</h1>
+		<a class="btn" href="/index.html">Go Back</a>
+		<br><br>
+		<!--
+		<object type="application/x-shockwave-flash" data="/images/newman.swf" width="400" height="500" ></object>
+		-->
+	</div>
+
+</body>
+</html>
